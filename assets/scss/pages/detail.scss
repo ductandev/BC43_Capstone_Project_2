@@ -1,0 +1,45 @@
+@import "../themes/variable";
+@import "../base/base";
+
+
+
+// HEADER
+.header {
+    background-color: $bg-c0-dark;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    border: 1px solid $bg-c0-dark;
+
+    .container {
+        margin: auto;
+        .header_left {
+            position: absolute;
+            left: 6%;
+            top: 10px;
+
+            .logo {
+                img {}
+            }
+        }
+
+        .header_right {
+            .charge {
+                position: absolute;
+                width: 66px;
+                height: 36px;
+                right: 12%;
+                top: 7px;
+
+                img {}
+
+                span {}
+            }
+
+            .login {}
+
+            .register {}
+
+        }
+    }
+}

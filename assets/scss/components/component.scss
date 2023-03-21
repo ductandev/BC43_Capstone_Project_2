@@ -1,0 +1,73 @@
+@import '../themes/variable';
+
+
+.button-primary {
+    @include button($fs-base,$fw-light,$text-c0-light,$bg-c0-primary,none, 5px,15px, $text-c0-light,$bg-c0-dark);
+}
+
+.text-base {
+    @include text($fs-base,$fw-normal,$text-c0-dark);
+}
+
+.text-title {
+    @include text($fs-3xl,$fw-semibold,$text-c0-dark);
+}
+
+.text-title-shadow {
+    @extend .text-title;
+    -webkit-box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
+    box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
+}
+
+// .icon-primary {
+//     color: blue;
+// }
+// .icon-danger {
+//     color: red;
+// }
+
+//Vòng lặp tăng dần 
+
+// .fs-1 {
+//     font-size: 5px;
+// }
+// .fs-2 {
+//     font-size: 10px;
+// }
+// .fs-3 {
+//     font-size: 15px;
+// }
+
+// Cho chạy từ 1-> 5
+@for $i from 1 to 6 {
+    .fs-#{$i} {
+        font-size: $i * 5px;
+    }
+}
+
+$arrFZ: ("0":1rem,"1":1.25rem,"2":1.5rem);
+
+@each $key,$value in $arrFZ {
+    .fz-#{$key}{
+        font-size: $value;
+    }
+}
+
+$arrColor : ("primary":blue,"success":green,"warning":rgb(236, 124, 18),"dark":$text-c0-dark);
+
+@each $key,$value in $arrColor {
+    .bg-#{$key} {
+        background: $value;
+    }
+    .text-#{$key} {
+        color:$value;
+    }
+    .border-#{$key} {
+        border-color: $value;
+    }
+}
+
+.shadow {
+    -webkit-box-shadow: 0px -1px 6px 5px #E5EDFF; 
+    box-shadow: 0px -1px 6px 5px #E5EDFF;
+}

@@ -1,0 +1,30 @@
+@import "../themes/variable";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+html{
+    --color: #{$text-c0-dark};
+    --bg: #{$bg-c0-light};
+}
+
+
+html.dark {
+    --color: #{$text-c0-light};
+    --bg: #{$bg-c0-dark};
+}
+
+body {
+    color:var(--color) !important;
+    background-color: var(--bg) !important;
+}
