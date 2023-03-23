@@ -5,19 +5,81 @@
     @include button($fs-base,$fw-light,$text-c0-light,$bg-c0-primary,none, 5px,15px, $text-c0-light,$bg-c0-dark);
 }
 
-.text-base {
-    @include text($fs-base,$fw-normal,$text-c0-dark);
+
+.text-header {
+    @include text($fw-light, $fs-base, $lh-sm, $text-c0-light);
+}
+.text-header-amount {
+    @include text($fw-light, $fs-3xl, $lh-lg, $text-c0-light);
+}
+.text-menu {
+    @include text($fw-light, $fs-2xl, $lh-base, $text-c0-dark);
+}
+.text-product-name {
+    @include text($fw-light, $fs-3xl, $lh-lg, $text-c0-dark);
+}
+.text-lorem {
+    @include text($fw-normal, $fs-base, $lh-sm, $text-c0-dark);
+}
+.text-available-size {
+    @include text(500, 24px, $lh-md, $text-c3-success);
+}
+.text-choose-size {
+    @include text($fw-semibold, 24px, $lh-md, $text-c1-dark);
+}
+.test-price-top{
+    @include text($fw-semibold, $fs-3xl, $lh-lg, $text-c0-danger)
+}
+.test-plush-minus{
+    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-light)
+}
+.test-amount{
+    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-dark)
+}
+.test-add-to-card{
+    @include text(500, 24px, $lh-md, $text-c4-secondary);
+}
+.text-realate-product {
+    @include text($fw-normal, $fs-4xl, $lh-xl, $text-c0-dark);
+}
+.text-name-product {
+    @include text($fw-light, 24px, $lh-md, $text-c0-dark);
+}
+.text-short-descript {
+    @include text($fw-light, $fs-2xl, $lh-base, $text-c2-secondary);
+}
+.text-buy-now {
+    @include text(200, 24px, $lh-md, $text-c0-dark);
+}
+.test-price-bottom{
+    @include text($fw-semibold, 24px, $lh-md, $text-c0-dark)
 }
 
-.text-title {
-    @include text($fs-3xl,$fw-semibold,$text-c0-dark);
+
+
+
+.posion-absolute{
+    @include frame-posion(absolute, 334px, 369px)
+}
+.posion-absolute-img{
+    @include img(absolute, 220px, 156px, 57px, 45px)
 }
 
-.text-title-shadow {
-    @extend .text-title;
-    -webkit-box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
-    box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
+
+.btn-plush-minus{
+    @include img(absolute, 50px, 50px, 527px, 370px);
+    background: linear-gradient(180deg, $bg-c0-puple 0%, $bg-c1-puple 99.48%);
 }
+.btn-gradient-add-to-card{
+    @include img(absolute, 175px, 64px, 527px, 427px);
+    background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+}
+
+// .text-title-shadow {
+//     @extend .text-title;
+//     -webkit-box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
+//     box-shadow: 1px 9px 5px 0px rgba(42, 115, 221, 0.59);
+// }
 
 // .icon-primary {
 //     color: blue;

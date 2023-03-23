@@ -1,13 +1,22 @@
 //Khai báo biến
 //--------------Biến trong css-----------
-.abc{
-    --color:red; 
+.abc {
+    --color: red;
 }
 
 /*------------- text ------------------*/
 $text-c0-primary: #2a73dd;
 $text-c0-dark: #000;
+$text-c1-dark: #1E1D1D;
 $text-c0-light: #fff;
+$text-c0-secondary: #CCCCCC;
+$text-c1-secondary: #F8F8F8;
+$text-c2-secondary: #CBC9C9;
+$text-c4-secondary: #FFF8F8;
+$text-c3-success: #1ED90E;
+$text-c0-danger: #FC0303;
+
+
 $fs-base: 16px;
 $fs-xl: 18px;
 $fs-2xl: 20px;
@@ -16,10 +25,19 @@ $fs-4xl: 40px;
 $fs-5xl: 50px;
 $fs-6xl: 60px;
 $fs-7xl: 70px;
+
 $fw-light: 300;
 $fw-normal: 400;
 $fw-semibold: 600;
 $fw-bold: 700;
+
+$lh-sm: 19px;
+$lh-base: 24px;
+$lh-md: 29px;
+$lh-lg: 36px;
+$lh-xl: 48px;
+
+
 
 
 
@@ -27,17 +45,27 @@ $fw-bold: 700;
 /* ------------- background ------------- */
 $bg-c0-primary: #2a73dd;
 $bg-c1-primary: #f5f9fe;
+$bg-c0-secondary: #CCCCCC;
+$bg-c1-secondary: #FFFCFC;
+$bg-c2-secondary: #F8F8F8;
+$bg-c3-secondary: #DEDDDC;
+$bg-c0-puple: #6181F3;
+$bg-c1-puple: #7C97F5;
+$bg-c0-violet: #D017EE;
+$bg-c3-danger: #E1B067;
 $bg-c0-dark: #000;
-$bg-c0-light:#fff;
+$bg-c0-light: #fff;
 $bg-none: transparent;
 
 /*----------------- mixin (hàm) ----------------*/
-@mixin text($fz:$fs-base,$fw:$fw-light,$c:$text-c0-dark) {
-    font-size: $fz;
+@mixin text($fw, $fz, $lh, $c) {
     font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
     color: $c;
 }
-@mixin button($fz,$fw,$c,$bg,$bd,$br,$p,$c-hover,$bg-hover){
+
+@mixin button($fz, $fw, $c, $bg, $bd, $br, $p, $c-hover, $bg-hover) {
     font-size: $fz;
     font-weight: $fw;
     color: $c;
@@ -46,8 +74,31 @@ $bg-none: transparent;
     border-radius: $br;
     padding: $p;
     cursor: pointer;
+
     &:hover {
         color: $c-hover;
-        background: $bg-hover;        
+        background: $bg-hover;
     }
+}
+
+@mixin frame-posion($posi, $w, $h) {
+    position: $posi;
+    width: $w;
+    height: $h;
+}
+
+@mixin img($posi, $w, $h, $l, $t) {
+    position: $posi;
+    width: $w;
+    height: $h;
+    left: $l;
+    top: $t;
+}
+
+@mixin text-size($posi:absolute, $l:20%, $r:16%, $t:22%, $b:20%) {
+    position: $posi;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
 }

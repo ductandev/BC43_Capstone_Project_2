@@ -18,25 +18,520 @@
   margin: 0 auto;
 }
 
+html {
+  --color: #000;
+  --bg: #fff;
+}
+
+html.dark {
+  --color: #fff;
+  --bg: #000;
+}
+
+body {
+  color: var(--color) !important;
+  background-color: var(--bg) !important;
+}
+
+.abc {
+  --color: red;
+}
+
+/*------------- text ------------------*/
+/* ------------- background ------------- */
+/*----------------- mixin (hàm) ----------------*/
+.button-primary {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  background: #2a73dd;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+}
+.button-primary:hover {
+  color: #fff;
+  background: #000;
+}
+
+.text-header, .header .container .header_right .register, .header .container .header_right .login {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.text-header-amount, .header .container .header_right .charge span {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.text-menu, .menu .container nav a {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
+
+.text-product-name, .productDetail .container .content_right h2 {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+}
+
+.text-lorem, .productDetail .container .content_right .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.text-available-size, .productDetail .container .content_right h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1ED90E;
+}
+
+.text-choose-size, .productDetail .container .content_right .btn-size p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1E1D1D;
+}
+
+.test-price-top, .productDetail .container .content_right .price {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FC0303;
+}
+
+.test-plush-minus, .productDetail .container .content_right #btn-minus, .productDetail .container .content_right #btn-plush {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.test-amount, .productDetail .container .content_right .amount {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+}
+
+.test-add-to-card, .productDetail .container .content_right .btn-add-to-cart p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFF8F8;
+}
+
+.text-realate-product, .realateProduct .container .title h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+}
+
+.text-name-product, .realateProduct .container .list-item .col .card .card-body .name-product {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+}
+
+.text-short-descript, .realateProduct .container .list-item .col .card .card-body .description {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #CBC9C9;
+}
+
+.text-buy-now, .realateProduct .container .list-item .col .card .card-body button {
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+}
+
+.test-price-bottom, .realateProduct .container .list-item .col .card .card-body .price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+}
+
+.posion-absolute, .realateProduct .container .list-item .col .card {
+  position: absolute;
+  width: 334px;
+  height: 369px;
+}
+
+.posion-absolute-img, .realateProduct .container .list-item .col .card img {
+  position: absolute;
+  width: 220px;
+  height: 156px;
+  left: 57px;
+  top: 45px;
+}
+
+.btn-plush-minus, .productDetail .container .content_right #btn-minus, .productDetail .container .content_right #btn-plush {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 527px;
+  top: 370px;
+  background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+}
+
+.btn-gradient-add-to-card, .productDetail .container .content_right .btn-add-to-cart {
+  position: absolute;
+  width: 175px;
+  height: 64px;
+  left: 527px;
+  top: 427px;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+}
+
+.fs-1 {
+  font-size: 5px;
+}
+
+.fs-2 {
+  font-size: 10px;
+}
+
+.fs-3 {
+  font-size: 15px;
+}
+
+.fs-4 {
+  font-size: 20px;
+}
+
+.fs-5 {
+  font-size: 25px;
+}
+
+.fz-0 {
+  font-size: 1rem;
+}
+
+.fz-1 {
+  font-size: 1.25rem;
+}
+
+.fz-2 {
+  font-size: 1.5rem;
+}
+
+.bg-primary {
+  background: blue;
+}
+
+.text-primary {
+  color: blue;
+}
+
+.border-primary {
+  border-color: blue;
+}
+
+.bg-success {
+  background: green;
+}
+
+.text-success {
+  color: green;
+}
+
+.border-success {
+  border-color: green;
+}
+
+.bg-warning {
+  background: rgb(236, 124, 18);
+}
+
+.text-warning {
+  color: rgb(236, 124, 18);
+}
+
+.border-warning {
+  border-color: rgb(236, 124, 18);
+}
+
+.bg-dark {
+  background: #000;
+}
+
+.text-dark {
+  color: #000;
+}
+
+.border-dark {
+  border-color: #000;
+}
+
+.shadow {
+  box-shadow: 0px -1px 6px 5px #E5EDFF;
+}
+
+.abc {
+  --color: red;
+}
+
+/*------------- text ------------------*/
+/* ------------- background ------------- */
+/*----------------- mixin (hàm) ----------------*/
 .header {
   background-color: #000;
   height: 50px;
-  width: 100%;
-  position: relative;
-  border: 1px solid #000;
 }
 .header .container {
-  margin: auto;
+  position: relative;
+  border: 1px solid #000;
+  width: 100%;
 }
 .header .container .header_left {
   position: absolute;
-  left: 6%;
+  left: 0%;
   top: 10px;
 }
 .header .container .header_right .charge {
   position: absolute;
   width: 66px;
   height: 36px;
-  right: 12%;
+  right: 135px;
   top: 7px;
+}
+.header .container .header_right .charge img {
+  position: absolute;
+  left: 0%;
+  right: 53.03%;
+  top: 8.33%;
+  bottom: 5.56%;
+}
+.header .container .header_right .charge span {
+  position: absolute;
+  left: 46.97%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+.header .container .header_right .login {
+  position: absolute;
+  text-decoration: none;
+  top: 15px;
+  right: 80px;
+}
+.header .container .header_right .register {
+  position: absolute;
+  text-decoration: none;
+  top: 15px;
+  right: 0px;
+}
+
+.menu {
+  background-color: #fff;
+}
+.menu .container nav a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.productDetail {
+  background: #fff;
+}
+.productDetail .container {
+  position: relative;
+  width: 1280px;
+  height: 530px;
+}
+.productDetail .container .content_left {
+  position: absolute;
+  width: 334px;
+  height: 355px;
+  left: 65px;
+  top: 58px;
+  background: #F8F8F8;
+}
+.productDetail .container .content_left img {
+  position: absolute;
+  width: 220px;
+  height: 156px;
+  left: 57px;
+  top: 109px;
+  background: #F8F8F8;
+}
+.productDetail .container .content_right h2 {
+  position: absolute;
+  width: 196px;
+  height: 36px;
+  left: 527px;
+  top: 67px;
+}
+.productDetail .container .content_right .text {
+  position: absolute;
+  width: 503px;
+  height: 90px;
+  left: 527px;
+  top: 112px;
+}
+.productDetail .container .content_right h3 {
+  position: absolute;
+  width: 162px;
+  height: 58px;
+  left: 527px;
+  top: 202px;
+}
+.productDetail .container .content_right .btn-size {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 250px;
+  background: #CCCCCC;
+  border: none;
+}
+.productDetail .container .content_right .btn-size p {
+  position: absolute;
+  left: 20%;
+  right: 16%;
+  top: 22%;
+  bottom: 20%;
+}
+.productDetail .container .content_right .btn-size.size-38 {
+  left: 526px;
+}
+.productDetail .container .content_right .btn-size.size-39 {
+  left: 597px;
+}
+.productDetail .container .content_right .btn-size.size-40 {
+  left: 669px;
+}
+.productDetail .container .content_right .btn-size.size-41 {
+  left: 740px;
+}
+.productDetail .container .content_right .btn-size.size-42 {
+  left: 811px;
+}
+.productDetail .container .content_right .price {
+  position: absolute;
+  width: 113px;
+  height: 47px;
+  left: 527px;
+  top: 317px;
+}
+.productDetail .container .content_right .amount {
+  position: absolute;
+  width: 14px;
+  height: 36px;
+  left: 597px;
+  top: 377px;
+}
+.productDetail .container .content_right #btn-minus {
+  left: 636px;
+}
+.productDetail .container .content_right .btn-add-to-cart p {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+}
+
+.realateProduct .container {
+  position: relative;
+  width: 1280px;
+  height: 1044px;
+  background: #FFFCFC;
+}
+.realateProduct .container .title h2 {
+  position: absolute;
+  width: 349px;
+  height: 48px;
+  left: 476px;
+  top: 16px;
+}
+.realateProduct .container .list-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.realateProduct .container .list-item .col {
+  width: 33.3333333333%;
+}
+.realateProduct .container .list-item .col .card {
+  background: #F8F8F8;
+}
+.realateProduct .container .list-item .col .card .card-body .name-product {
+  position: absolute;
+  width: 185px;
+  height: 29px;
+  left: 23px;
+  top: 231px;
+}
+.realateProduct .container .list-item .col .card .card-body .description {
+  position: absolute;
+  width: 153px;
+  height: 24px;
+  left: 23px;
+  top: 268px;
+}
+.realateProduct .container .list-item .col .card .card-body button {
+  position: absolute;
+  width: 175px;
+  height: 64px;
+  left: 0px;
+  top: 305px;
+  background: #E1B067;
+  border: none;
+}
+.realateProduct .container .list-item .col .card .card-body .price {
+  position: absolute;
+  width: 160px;
+  height: 64px;
+  left: 174px;
+  top: 305px;
+  background: #DEDDDC;
+}
+.realateProduct .container .list-item .col .card .card-body .price p {
+  position: absolute;
+  width: 54px;
+  height: 29px;
+  left: 66px;
+  top: 17px;
+}
+.realateProduct .container .list-item .col .card.item1 {
+  left: 99px;
+  top: 153px;
+}
+.realateProduct .container .list-item .col .card.item2 {
+  left: 493px;
+  top: 153px;
+}
+.realateProduct .container .list-item .col .card.item3 {
+  left: 914px;
+  top: 153px;
+}
+.realateProduct .container .list-item .col .card.item4 {
+  left: 99px;
+  top: 569px;
+}
+.realateProduct .container .list-item .col .card.item5 {
+  left: 493px;
+  top: 569px;
+}
+.realateProduct .container .list-item .col .card.item6 {
+  left: 914px;
+  top: 569px;
+}
+
+.footer .container img {
+  position: absolute;
+  width: 1280px;
+  height: 242px;
 }
