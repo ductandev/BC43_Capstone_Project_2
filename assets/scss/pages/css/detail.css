@@ -530,8 +530,87 @@ body {
   top: 569px;
 }
 
-.footer .container img {
+.footer .footer_top {
+  background: #fafafa;
+}
+.footer .footer_top .container {
+  position: relative;
+  display: flex;
+  height: 190px;
+  margin: auto;
+}
+.footer .footer_top .container .item .title h3 {
+  margin: 30px 0 10px;
+}
+.footer .footer_top .container .item .title a {
+  text-decoration: none;
+  color: #000;
+  line-height: 1.5;
+}
+.footer .footer_top .container .item .title.title1 {
   position: absolute;
-  width: 1280px;
-  height: 242px;
+  left: 185px;
+  width: 280px;
+  border-right: 1px solid #CCCCCC;
+}
+.footer .footer_top .container .item .title.title2 {
+  position: absolute;
+  left: 480px;
+  width: 280px;
+  border-right: 1px solid #CCCCCC;
+}
+.footer .footer_top .container .item .title.title3 {
+  position: absolute;
+  left: 780px;
+  width: 500px;
+}
+.footer .footer_top .container .item .title.title3 a:last-of-type p {
+  color: #FC0303;
+  line-height: 1.8;
+}
+.footer .footer_bottom {
+  background: #ececec;
+}
+.footer .footer_bottom .container {
+  position: relative;
+  display: flex;
+  height: 190px;
+  margin: auto;
+}
+.footer .footer_bottom .container .item .title h3 {
+  margin: 30px 0 10px;
+}
+.footer .footer_bottom .container .item .title a {
+  text-decoration: none;
+  color: #000;
+  line-height: 1.5;
+}
+.footer .footer_bottom .container .item .title.title1 {
+  position: absolute;
+  left: 185px;
+  width: 280px;
+  border-right: 1px solid #CCCCCC;
+}
+.footer .footer_bottom .container .item .title.title1 a:last-of-type p {
+  color: #FC0303;
+  line-height: 1.8;
+}
+.footer .footer_bottom .container .item .title.title2 {
+  position: absolute;
+  left: 480px;
+  width: 280px;
+  border-right: 1px solid #CCCCCC;
+}
+.footer .footer_bottom .container .item .title.title2 a:last-of-type p {
+  color: #FC0303;
+  line-height: 1.8;
+}
+.footer .footer_bottom .container .item .title.title3 {
+  position: absolute;
+  left: 780px;
+  width: 500px;
+}
+.footer .footer_bottom .container .item .title.title3 a:last-of-type p {
+  color: #FC0303;
+  line-height: 1.8;
 }

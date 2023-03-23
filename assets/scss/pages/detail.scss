@@ -174,7 +174,7 @@
             .btn-add-to-cart {
                 @extend .btn-gradient-add-to-card;
 
-                p{
+                p {
                     @extend .test-add-to-card;
                     position: absolute;
                     top: 18px;
@@ -185,78 +185,89 @@
     }
 }
 
-.realateProduct{
-    .container{
+.realateProduct {
+    .container {
         @include frame-posion(relative, 1280px, 1044px);
         background: $bg-c1-secondary;
 
-        .title{
-            h2{
+        .title {
+            h2 {
                 @include img(absolute, 349px, 48px, 476px, 16px);
                 @extend .text-realate-product;
             }
         }
-        .list-item{
+
+        .list-item {
             display: flex;
             flex-wrap: wrap;
 
-            .col{
+            .col {
                 width: calc(100%/3);
 
-                .card{
+                .card {
                     @extend .posion-absolute;
                     background: $bg-c2-secondary;
-                    
-                    img{
+
+                    img {
                         @extend .posion-absolute-img;
                     }
-                    .card-body{
-                        .name-product{
+
+                    .card-body {
+                        .name-product {
                             @include img(absolute, 185px, 29px, 23px, 231px);
                             @extend .text-name-product;
                         }
-                        .description{
+
+                        .description {
                             @include img(absolute, 153px, 24px, 23px, 268px);
                             @extend .text-short-descript;
                         }
-                        button{
+
+                        button {
                             @include img(absolute, 175px, 64px, 0px, 305px);
                             @extend .text-buy-now;
                             background: $bg-c3-danger;
                             border: none;
                         }
-                        .price{
+
+                        .price {
                             @include img(absolute, 160px, 64px, 174px, 305px);
                             @extend .test-price-bottom;
                             background: $bg-c3-secondary;
-                            
-                            p{
+
+                            p {
                                 @include img(absolute, 54px, 29px, 66px, 17px);
                             }
                         }
                     }
                 }
-                .card.item1{
+
+                .card.item1 {
                     left: 99px;
                     top: 153px;
                 }
-                .card.item2{
+
+                .card.item2 {
                     left: 493px;
                     top: 153px;
                 }
-                .card.item3{
+
+                .card.item3 {
                     left: 914px;
                     top: 153px;
                 }
-                .card.item4{
+
+                .card.item4 {
                     left: 99px;
                     top: 569px;
                 }
-                .card.item5{
+
+                .card.item5 {
                     left: 493px;
                     top: 569px;
                 }
-                .card.item6{
+
+                .card.item6 {
                     left: 914px;
                     top: 569px;
                 }
@@ -265,10 +276,115 @@
     }
 }
 
-.footer{
-    .container{
-        img{
-            @include frame-posion(absolute, 1280px, 242px)
+.footer {
+    .footer_top {
+        background: $bg-c4-secondary;
+
+        .container{
+            position: relative;
+            display: flex;
+            height: 190px;
+            margin: auto;
+
+            .item { 
+                .title{
+                    h3{
+                        margin: 30px 0 10px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $text-c0-dark;
+                        line-height: 1.5;
+                    }
+                }
+                .title.title1{
+                    position: absolute;
+                    left: 185px;
+                    width: 280px;
+                    border-right: 1px solid $bg-c0-secondary;
+                }
+                .title.title2{
+                    position: absolute;
+                    left: 480px;
+                    width: 280px;
+                    border-right: 1px solid $bg-c0-secondary;
+                }
+                .title.title3{
+                    position: absolute;
+                    left: 780px;
+                    width: 500px;
+
+                    a:last-of-type{
+                        p{
+                            color: $text-c0-danger;
+                            line-height: 1.8;
+                        }
+                    }
+                }
+            }
         }
     }
+
+    .footer_bottom {
+        background: $bg-c5-secondary;
+
+        .container{
+            position: relative;
+            display: flex;
+            height: 190px;
+            margin: auto;
+
+            .item { 
+                .title{
+                    h3{
+                        margin: 30px 0 10px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $text-c0-dark;
+                        line-height: 1.5;
+                    }
+                }
+                .title.title1{
+                    position: absolute;
+                    left: 185px;
+                    width: 280px;
+                    border-right: 1px solid $bg-c0-secondary;
+
+                    a:last-of-type{
+                        p{
+                            color: $text-c0-danger;
+                            line-height: 1.8;
+                        }
+                    }
+                }
+                .title.title2{
+                    position: absolute;
+                    left: 480px;
+                    width: 280px;
+                    border-right: 1px solid $bg-c0-secondary;
+
+                    a:last-of-type{
+                        p{
+                            color: $text-c0-danger;
+                            line-height: 1.8;
+                        }
+                    }
+                }
+                .title.title3{
+                    position: absolute;
+                    left: 780px;
+                    width: 500px;
+
+                    a:last-of-type{
+                        p{
+                            color: $text-c0-danger;
+                            line-height: 1.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
