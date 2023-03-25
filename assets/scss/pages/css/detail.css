@@ -168,7 +168,8 @@ body {
 .hover-gradient, .footer .footer_bottom .container .item .title a p, .footer .footer_top .container .item .title a p, .menu .container .navbar .navbar-collapse .navbar-nav a, .header .container .header_right a {
   background: linear-gradient(to right, #d118ec, #5136f9, rgba(62, 32, 248, 0.9019607843));
   background-size: 300% 300%;
-  animation: rainbow 2s ease-in-out infinite;
+  -webkit-animation: rainbow 2s ease-in-out infinite;
+          animation: rainbow 2s ease-in-out infinite;
   -webkit-background-clip: text;
           background-clip: text;
   transition: color 0.2s ease-in-out;
@@ -463,6 +464,18 @@ body {
 }
 .footer .footer_bottom .container .item .title1, .footer .footer_bottom .container .item .title2 {
   border-right: 1px solid #CCCCCC;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 @keyframes rainbow {
