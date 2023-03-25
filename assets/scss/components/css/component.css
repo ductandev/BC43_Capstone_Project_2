@@ -26,17 +26,12 @@
   font-size: 16px;
   line-height: 19px;
   color: #fff;
-}
-
-.text-header-amount {
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 36px;
-  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
 .text-menu {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #000;
@@ -70,32 +65,34 @@
   color: #1E1D1D;
 }
 
-.test-price-top {
+.text-price-top {
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
   color: #FC0303;
 }
 
-.test-plush-minus {
+.text-plush-minus {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   color: #fff;
+  background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
 }
 
-.test-amount {
+.text-amount {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   color: #000;
 }
 
-.test-add-to-card {
+.text-add-to-card {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #FFF8F8;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9019607843) 5.14%, #D017EE 89.71%);
 }
 
 .text-realate-product {
@@ -103,6 +100,7 @@
   font-size: 40px;
   line-height: 48px;
   color: #000;
+  text-align: center;
 }
 
 .text-name-product {
@@ -126,43 +124,20 @@
   color: #000;
 }
 
-.test-price-bottom {
+.text-price-bottom {
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   color: #000;
 }
 
-.posion-absolute {
-  position: absolute;
-  width: 334px;
-  height: 369px;
-}
-
-.posion-absolute-img {
-  position: absolute;
-  width: 220px;
-  height: 156px;
-  left: 57px;
-  top: 45px;
-}
-
-.btn-plush-minus {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 527px;
-  top: 370px;
-  background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
-}
-
-.btn-gradient-add-to-card {
-  position: absolute;
-  width: 175px;
-  height: 64px;
-  left: 527px;
-  top: 427px;
-  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+.hover-gradient {
+  background: linear-gradient(to right, #d118ec, #5136f9, rgba(62, 32, 248, 0.9019607843));
+  background-size: 300% 300%;
+  animation: rainbow 2s ease-in-out infinite;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: color 0.2s ease-in-out;
 }
 
 .fs-1 {

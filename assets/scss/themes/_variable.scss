@@ -15,6 +15,11 @@ $text-c2-secondary: #CBC9C9;
 $text-c4-secondary: #FFF8F8;
 $text-c3-success: #1ED90E;
 $text-c0-danger: #FC0303;
+$text-c0-violet: #d118ec;
+$text-c1-violet: #5136f9;
+$text-c2-violet: #3e20f8e6;
+
+
 
 
 $fs-base: 16px;
@@ -39,16 +44,14 @@ $lh-xl: 48px;
 
 
 
-
-
 // -------------Biến trong sass----------
 /* ------------- background ------------- */
 $bg-c0-primary: #2a73dd;
-$bg-c1-primary: #f5f9fe;
+$bg-c1-primary: #3e20f8e6;
 $bg-c0-secondary: #CCCCCC;
-$bg-c1-secondary: #FFFCFC;
-$bg-c2-secondary: #F8F8F8;
-$bg-c3-secondary: #DEDDDC;
+$bg-c1-secondary: #DEDDDC;
+$bg-c2-secondary: #FFFCFC;
+$bg-c3-secondary: #F8F8F8;
 $bg-c4-secondary: #fafafa;
 $bg-c5-secondary: #ececec;
 $bg-c0-puple: #6181F3;
@@ -81,26 +84,4 @@ $bg-none: transparent;
         color: $c-hover;
         background: $bg-hover;
     }
-}
-
-@mixin frame-posion($posi, $w, $h) {
-    position: $posi;
-    width: $w;
-    height: $h;
-}
-
-@mixin img($posi, $w, $h, $l, $t) {
-    position: $posi;
-    width: $w;
-    height: $h;
-    left: $l;
-    top: $t;
-}
-
-@mixin text-size($posi:absolute, $l:20%, $r:16%, $t:22%, $b:20%) {
-    position: $posi;
-    left: $l;
-    right: $r;
-    top: $t;
-    bottom: $b;
 }

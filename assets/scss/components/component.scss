@@ -8,12 +8,11 @@
 
 .text-header {
     @include text($fw-light, $fs-base, $lh-sm, $text-c0-light);
-}
-.text-header-amount {
-    @include text($fw-light, $fs-3xl, $lh-lg, $text-c0-light);
+    text-decoration: none;
+    margin-left: 15px;
 }
 .text-menu {
-    @include text($fw-light, $fs-2xl, $lh-base, $text-c0-dark);
+    @include text($fw-normal, $fs-2xl, $lh-base, $text-c0-dark);
 }
 .text-product-name {
     @include text($fw-light, $fs-3xl, $lh-lg, $text-c0-dark);
@@ -27,20 +26,23 @@
 .text-choose-size {
     @include text($fw-semibold, 24px, $lh-md, $text-c1-dark);
 }
-.test-price-top{
-    @include text($fw-semibold, $fs-3xl, $lh-lg, $text-c0-danger)
+.text-price-top{
+    @include text($fw-semibold, $fs-3xl, $lh-lg, $text-c0-danger);
 }
-.test-plush-minus{
-    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-light)
+.text-plush-minus{
+    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-light);
+    background: linear-gradient(180deg, $bg-c0-puple 0%, $bg-c1-puple 99.48%);
 }
-.test-amount{
-    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-dark)
+.text-amount{
+    @include text($fw-normal, $fs-3xl, $lh-lg, $text-c0-dark);
 }
-.test-add-to-card{
+.text-add-to-card{
     @include text(500, 24px, $lh-md, $text-c4-secondary);
+    background: linear-gradient(270deg, $bg-c1-primary 5.14%, $bg-c0-violet 89.71%);
 }
 .text-realate-product {
     @include text($fw-normal, $fs-4xl, $lh-xl, $text-c0-dark);
+    text-align: center
 }
 .text-name-product {
     @include text($fw-light, 24px, $lh-md, $text-c0-dark);
@@ -51,29 +53,20 @@
 .text-buy-now {
     @include text(200, 24px, $lh-md, $text-c0-dark);
 }
-.test-price-bottom{
-    @include text($fw-semibold, 24px, $lh-md, $text-c0-dark)
+.text-price-bottom{
+    @include text($fw-semibold, 24px, $lh-md, $text-c0-dark);
 }
 
 
 
+.hover-gradient{
+    background: linear-gradient(to right, $text-c0-violet, $text-c1-violet, $text-c2-violet);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    transition: color .2s ease-in-out;
+}
 
-.posion-absolute{
-    @include frame-posion(absolute, 334px, 369px)
-}
-.posion-absolute-img{
-    @include img(absolute, 220px, 156px, 57px, 45px)
-}
-
-
-.btn-plush-minus{
-    @include img(absolute, 50px, 50px, 527px, 370px);
-    background: linear-gradient(180deg, $bg-c0-puple 0%, $bg-c1-puple 99.48%);
-}
-.btn-gradient-add-to-card{
-    @include img(absolute, 175px, 64px, 527px, 427px);
-    background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
-}
 
 // .text-title-shadow {
 //     @extend .text-title;
