@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+//back to top
+>>>>>>> giang-branch1-index
 window.onscroll = () => {
   toggleTopButton();
 };
