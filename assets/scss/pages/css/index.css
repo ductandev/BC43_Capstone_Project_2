@@ -165,3 +165,27 @@ a {
   color: #000;
   font-size: 16px;
 }
+
+.footer .container-fluid .row .top .container .list-item .item {
+  border-right: 2px solid #1c6ea4;
+}
+.footer .container-fluid .row .top .container .list-item .item h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.footer .container-fluid .row .top .container .list-item .item a p {
+  font-size: 16px;
+}
+.footer .container-fluid .row .bot {
+  background-color: #dedddc;
+}
+.footer .container-fluid .row .bot .container .list-item .item {
+  border-right: 2px solid #1c6ea4;
+}
+.footer .container-fluid .row .bot .container .list-item .item h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.footer .container-fluid .row .bot .container .list-item .item a p {
+  font-size: 16px;
+}
