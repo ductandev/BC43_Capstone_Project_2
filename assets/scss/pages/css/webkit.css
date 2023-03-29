@@ -1,0 +1,28 @@
+.form-control input:focus {
+  outline: 0;
+  border-bottom-color: #c8c8c8;
+}
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #c8c8c8;
+}
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 20px;
+  min-width: 5px;
+  color: #f5f9fe;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #c8c8c8;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: (-20px);
+}

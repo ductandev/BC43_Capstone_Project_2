@@ -1,1 +1,387 @@
 // Biuld ra nhúng vào files register.html
+//text
+$text-primary-c0: #2a73dd;
+$text-dark-c0: #000;
+$text-dark-c1: #656774;
+$text-light: #fff;
+$fs-base: 16px;
+$fs-xl: 18px;
+$fs-2xl: 20px;
+$fs-3xl: 25px;
+$fs-4xl: 40px;
+$fs-5xl: 50px;
+$fs-6xl: 60px;
+$fs-7xl: 70px;
+$fs-8xl: 80px;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+/*------------- background -------------*/
+$bg-primary-c0: #2a73dd;
+$bg-primary-c1: #fff;
+$bg-none: transparent;
+$bg-footer-bot: #dedddc;
+
+//btn
+$background: #fefefe;
+$text: #4b507a;
+
+$cyan: #60daaa;
+$yellow: #fbca67;
+$orange: #ff8a30;
+$red: #a166ab;
+$purple: #6477b9;
+$blue: #0eb7da;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+$btn-bg: #f8b653;
+@mixin btn($bg, $cl, $bd, $br, $fs, $p, $c-hover, $bg-hover) {
+  background: $bg;
+  color: $cl;
+  border: $bd;
+  border-radius: $br;
+  font-size: $fs;
+  padding: $p;
+  cursor: pointer;
+  &:hover {
+    color: $c-hover;
+    background: $bg-hover;
+  }
+}
+header {
+  background: #000;
+  .list-flex {
+    a {
+    }
+    .img {
+    }
+    .login {
+      img {
+      }
+      a {
+        color: $bg-primary-c1;
+        &:hover {
+          color: plum;
+        }
+      }
+    }
+  }
+}
+.menu {
+  padding: 80px 0px;
+  .container {
+    .item {
+      a {
+        padding-right: 20px;
+        &:hover {
+          color: plum;
+        }
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.register-form {
+  padding-bottom: 50px;
+  .container {
+    .form-input {
+      padding: 10px 10px;
+      box-shadow: rgba(9, 138, 236, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      .p-0 {
+        text-align: center;
+        .draw {
+          background: none;
+          border: 0;
+          box-sizing: border-box;
+          margin: 1em;
+          padding: 1em 2em;
+
+          // Using inset box-shadow instead of border for sizing simplicity
+          box-shadow: inset 0 0 0 2px $red;
+          color: $red;
+          font-size: inherit;
+          font-weight: 700;
+
+          // Required, since we're setting absolute on pseudo-elements
+          position: relative;
+          vertical-align: middle;
+
+          &::before,
+          &::after {
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+          transition: color 0.25s;
+
+          &::before,
+          &::after {
+            // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+          }
+
+          // This covers the top & right borders (expands right, then down)
+          &::before {
+            top: 0;
+            left: 0;
+          }
+
+          // And this the bottom & left borders (expands left, then up)
+          &::after {
+            bottom: 0;
+            right: 0;
+          }
+
+          &:hover {
+            color: $cyan;
+          }
+
+          // Hover styles
+          &:hover::before,
+          &:hover::after {
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover::before {
+            border-top-color: $cyan; // Make borders visible
+            border-right-color: $cyan;
+            transition: width 0.25s ease-out,
+              // Width expands first
+              height 0.25s ease-out 0.25s; // And then height
+          }
+
+          &:hover::after {
+            border-bottom-color: $cyan; // Make borders visible
+            border-left-color: $cyan;
+            transition: border-color 0s ease-out 0.5s,
+              // Wait for ::before to finish before showing border
+              width 0.25s ease-out 0.5s,
+              // And then exanding width
+              height 0.25s ease-out 0.75s; // And finally height
+          }
+        }
+      }
+
+      .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 190px;
+        color: #c8c8c8;
+        input {
+          background-color: transparent;
+          border: 0;
+          border-bottom: 2px #a166ab solid;
+          display: block;
+          width: 100%;
+          padding: 10px 0;
+          font-size: $fs-2xl;
+          color: $text-dark-c0;
+          &:focus {
+            outline: 0;
+            border-bottom-color: #0eb7da;
+          }
+          &:valid {
+            outline: 0;
+            border-bottom-color: #0eb7da;
+          }
+        }
+        label {
+          margin-left: 20px;
+          position: absolute;
+          top: 15px;
+          left: 0;
+          pointer-events: none;
+          span {
+            display: inline-block;
+            font-size: $fs-2xl;
+            min-width: 5px;
+            color: $purple;
+            -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+        }
+        small {
+          color: red;
+        }
+      }
+    }
+    .gender {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+      h1 {
+        text-align: center;
+      }
+      .qr {
+        .title {
+          p {
+            font-size: $fs-3xl;
+            text-align: start;
+          }
+          .gender-choose {
+            .me-auto {
+              .radiostyle:checked ~ .radio-text {
+                color: #e41c23;
+              }
+
+              .radio-input {
+                // display: flex;
+                text-align: left;
+                button {
+                  padding: 10px 40px;
+                  // background-color: $purple;
+                  // margin-left: 20px;
+                }
+                .radio-compont {
+                  display: flex;
+                  font-family: "Courier New", Courier, monospace;
+                  padding: 10px;
+                  cursor: pointer;
+                  transition: 0.3s;
+                  &:hover {
+                    box-shadow: inset 4px 4px 12px #afaeae,
+                      inset -4px -4px 12px #ffffffc9;
+                  }
+                  .radio-text {
+                    padding: 0px 10px;
+                    // color: hsl(0, 0%, 40%);
+                    font-size: $fs-base;
+                    text-transform: uppercase;
+                    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                      sans-serif;
+                    .radiostyle {
+                      width: 20px;
+                      height: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .row {
+            .line {
+              margin: 30px 0px;
+              position: relative;
+              height: 1px;
+              width: 100%;
+              background-color: #c8c8c8;
+              &::before {
+                content: "Or ";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $bg-primary-c1;
+                color: #000;
+                padding: 0 15px;
+              }
+            }
+
+            .gradient-border {
+              --borderWidth: 2px;
+              background: #fff;
+              position: relative;
+              border-radius: var(--borderWidth);
+            }
+            .gradient-border:after {
+              content: "";
+              position: absolute;
+              top: calc(-1 * var(--borderWidth));
+              left: calc(-1 * var(--borderWidth));
+              height: calc(100% + var(--borderWidth) * 2);
+              width: calc(100% + var(--borderWidth) * 2);
+              background: linear-gradient(
+                60deg,
+                #e03189,
+                #270418,
+                #ef4e7b,
+                #a166ab,
+                #662eb5,
+                #b451e5,
+                #b13dc1,
+                #6fba82
+              );
+              border-radius: calc(2 * var(--borderWidth));
+              z-index: -1;
+              animation: animatedgradient 3s ease alternate infinite;
+              background-size: 300% 300%;
+            }
+
+            @keyframes animatedgradient {
+              0% {
+                background-position: 0% 50%;
+              }
+              50% {
+                background-position: 100% 50%;
+              }
+              100% {
+                background-position: 0% 50%;
+              }
+            }
+          }
+        }
+
+        .choose {
+        }
+      }
+    }
+  }
+}
+.footer {
+  .container-fluid {
+    .row {
+      .top {
+        .container {
+          .list-item {
+            .item {
+              border-right: 2px solid #1c6ea4;
+              h3 {
+                font-size: $fs-2xl;
+                font-weight: $fw-bold;
+              }
+              a {
+                p {
+                  font-size: $fs-base;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bot {
+        background-color: $bg-footer-bot;
+        .container {
+          .list-item {
+            .item {
+              border-right: 2px solid #1c6ea4;
+              h3 {
+                font-size: $fs-2xl;
+                font-weight: $fw-bold;
+              }
+              a {
+                p {
+                  font-size: $fs-base;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
