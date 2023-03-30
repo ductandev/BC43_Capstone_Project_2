@@ -177,7 +177,8 @@ body {
 .hover-gradient, .footer .footer_bottom .container .item .title a p, .footer .footer_top .container .item .title a p, .menu .container .navbar .navbar-collapse .navbar-nav a, .header .container .header_right a {
   background: linear-gradient(to right, #00e6d8, #9425f3, #5136f9);
   background-size: 300% 300%;
-  animation: rainbow 2s ease-in-out infinite;
+  -webkit-animation: rainbow 2s ease-in-out infinite;
+          animation: rainbow 2s ease-in-out infinite;
   -webkit-background-clip: text;
           background-clip: text;
   transition: color 0.2s ease-in-out;
@@ -494,6 +495,7 @@ body {
   border-right: 1px solid #CCCCCC;
 }
 
+<<<<<<< HEAD
 /* Back To Top */
 .backToTop {
   position: fixed;
@@ -530,6 +532,17 @@ body {
     width: 45px;
     height: 45px;
     line-height: 40px;
+=======
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+>>>>>>> d3d73d51ad6e186bccb0b2741a28b64ac44645ef
   }
 }
 

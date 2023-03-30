@@ -142,7 +142,8 @@
 .hover-gradient {
   background: linear-gradient(to right, #00e6d8, #9425f3, #5136f9);
   background-size: 300% 300%;
-  animation: rainbow 2s ease-in-out infinite;
+  -webkit-animation: rainbow 2s ease-in-out infinite;
+          animation: rainbow 2s ease-in-out infinite;
   -webkit-background-clip: text;
           background-clip: text;
   transition: color 0.2s ease-in-out;
