@@ -21,6 +21,7 @@
 html {
   --color: #000;
   --bg: #fff;
+  scroll-behavior: smooth;
 }
 
 html.dark {
@@ -139,14 +140,14 @@ body {
 
 .text-name-product, .realateProduct .container .list-item .col-4 .card .card-body .name-product {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   color: #000;
 }
 
 .text-short-descript, .realateProduct .container .list-item .col-4 .card .card-body .description {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: #CBC9C9;
 }
@@ -165,8 +166,16 @@ body {
   color: #000;
 }
 
+.text-gradient {
+  color: #00e6d8;
+  background-image: -webkit-linear-gradient(45deg, #00e6d8 0%, #9425f3 50%, #5136f9 1000%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hover-gradient, .footer .footer_bottom .container .item .title a p, .footer .footer_top .container .item .title a p, .menu .container .navbar .navbar-collapse .navbar-nav a, .header .container .header_right a {
-  background: linear-gradient(to right, #d118ec, #5136f9, rgba(62, 32, 248, 0.9019607843));
+  background: linear-gradient(to right, #00e6d8, #9425f3, #5136f9);
   background-size: 300% 300%;
   animation: rainbow 2s ease-in-out infinite;
   -webkit-background-clip: text;
@@ -321,8 +330,8 @@ body {
   height: 355px;
   background: #F8F8F8;
 }
-.productDetail .container .row .content_left .card-img img {
-  padding: 109px 0 0 57px;
+.productDetail .container .row .content_right {
+  padding-right: 57px;
 }
 @media screen and (max-width: 992px) {
   .productDetail .container .row .content_right {
@@ -338,8 +347,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .productDetail .container .row .content_right {
-    padding-left: 68px;
-    padding-right: 24px;
+    padding: 0 75px;
   }
 }
 .productDetail .container .row .content_right h2 {
@@ -348,12 +356,22 @@ body {
 .productDetail .container .row .content_right .text {
   margin-bottom: 0;
 }
+@media screen and (max-width: 576px) {
+  .productDetail .container .row .content_right h3 {
+    margin-top: 0.5rem;
+  }
+}
 .productDetail .container .row .content_right .btn-size {
   width: 50px;
   height: 50px;
   background: #CCCCCC;
   border: none;
   margin: 0.5rem 1rem 0 0;
+}
+@media screen and (max-width: 576px) {
+  .productDetail .container .row .content_right .btn-size {
+    margin: 0.5rem 0.75rem 0 0;
+  }
 }
 .productDetail .container .row .content_right .price {
   margin-top: 1rem;
@@ -362,10 +380,12 @@ body {
   width: 50px;
   height: 50px;
   border: none;
-  margin: 0 1rem 0 0;
 }
 .productDetail .container .row .content_right .amount {
-  margin-right: 1rem;
+  width: 45px;
+  margin: 0 10px;
+  padding: 3px 0;
+  background: #DEDDDC;
 }
 .productDetail .container .row .content_right .btn-add-to-cart {
   display: block;
@@ -373,6 +393,7 @@ body {
   height: 64px;
   line-height: 64px;
   text-align: center;
+  margin-top: 0.75rem;
 }
 
 .realateProduct {
@@ -399,6 +420,10 @@ body {
   background: #F8F8F8;
   overflow: hidden;
 }
+.realateProduct .container .list-item .col-4 .card img {
+  width: 100%;
+  margin: 0;
+}
 .realateProduct .container .list-item .col-4 .card .card-body .d-flex button {
   width: 60%;
   padding: 1rem 0;
@@ -424,10 +449,12 @@ body {
   color: #1E1D1D;
 }
 .footer .footer_top .container .item .title a {
+  display: block;
   text-decoration: none;
   font-size: 13px;
 }
 .footer .footer_top .container .item .title a p {
+  display: inline-block;
   margin-bottom: 0.5rem;
 }
 .footer .footer_top .container .item .title a p:hover {
@@ -449,10 +476,12 @@ body {
   color: #1E1D1D;
 }
 .footer .footer_bottom .container .item .title a {
+  display: block;
   text-decoration: none;
   font-size: 13px;
 }
 .footer .footer_bottom .container .item .title a p {
+  display: inline-block;
   margin-bottom: 0.5rem;
 }
 .footer .footer_bottom .container .item .title a p:hover {
@@ -463,6 +492,45 @@ body {
 }
 .footer .footer_bottom .container .item .title1, .footer .footer_bottom .container .item .title2 {
   border-right: 1px solid #CCCCCC;
+}
+
+/* Back To Top */
+.backToTop {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .backToTop {
+    right: 10px;
+    bottom: 20px;
+  }
+}
+
+/* back-to-top button visible */
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.backToTop i {
+  color: #D017EE;
+  border: 3px solid #D017EE;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .backToTop i {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+  }
 }
 
 @keyframes rainbow {

@@ -45,10 +45,10 @@
     text-align: center
 }
 .text-name-product {
-    @include text($fw-light, 24px, $lh-md, $text-c0-dark);
+    @include text($fw-light, $fs-2xl , $lh-md, $text-c0-dark);
 }
 .text-short-descript {
-    @include text($fw-light, $fs-2xl, $lh-base, $text-c2-secondary);
+    @include text($fw-light, $fs-xl, $lh-base, $text-c2-secondary);
 }
 .text-buy-now {
     @include text(200, 24px, $lh-md, $text-c0-dark);
@@ -57,6 +57,37 @@
     @include text($fw-semibold, 24px, $lh-md, $text-c0-dark);
 }
 
+
+
+
+
+
+
+
+.text-gradient {
+    color: $text-c0-violet;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      $text-c0-violet 0%,
+      $text-c1-violet 50%,
+      $text-c2-violet 1000%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    // background: linear-gradient(
+    //     to right, 
+    //     #00e6d8 0, 
+    //     #c15bff 25%, 
+    //     #ff00a6 50%, 
+    //     #ff2c1c 75%, 
+    //     #ffb800 100%
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
 
 
 .hover-gradient{

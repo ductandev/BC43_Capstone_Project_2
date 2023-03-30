@@ -3,8 +3,6 @@
 @import "../themes/variable";
 
 
-
-// HEADER
 .header {
     background-color: $bg-c0-dark;
     height: 50px;
@@ -115,12 +113,13 @@
                     background: $bg-c3-secondary;
 
                     img {
-                        padding: 109px 0 0 57px;
+                        // padding: 109px 0 0 57px;
                     }
                 }
             }
 
             .content_right {
+                padding-right: 57px;
                 @media screen and (max-width: 992px) {
                     padding-left: 48px;
                     padding-right: 40px;
@@ -131,8 +130,7 @@
                 }
 
                 @media screen and (max-width: 576px) {
-                    padding-left: 68px;
-                    padding-right: 24px;
+                    padding: 0 75px;
                 }
 
                 
@@ -149,6 +147,10 @@
 
                 h3 {
                     @extend .text-available-size;
+
+                    @media screen and (max-width: 576px) {
+                        margin-top: 0.5rem;
+                    }
                 }
 
                 .btn-size {
@@ -158,6 +160,10 @@
                     border: none;
                     margin: 0.5rem 1rem 0 0;
                     @extend .text-choose-size;
+
+                    @media screen and (max-width: 576px) {
+                        margin: 0.5rem 0.75rem 0 0;
+                    }
                 }
 
                 .price {
@@ -169,13 +175,15 @@
                     width: 50px;
                     height: 50px;
                     border: none;
-                    margin: 0 1rem 0 0;
                     @extend .text-plush-minus;
                 }
 
                 .amount {
                     @extend .text-amount;
-                    margin-right: 1rem;
+                    width: 45px;
+                    margin: 0 10px;
+                    padding: 3px 0;
+                    background: $bg-c1-secondary;
                 }
 
                 .btn-add-to-cart {
@@ -185,6 +193,7 @@
                     line-height: 64px;
                     text-align: center;
                     @extend .text-add-to-card;
+                    margin-top: 0.75rem;
                 }
             }
         }
@@ -221,7 +230,10 @@
                     background: $bg-c3-secondary;
                     overflow: hidden;
 
-                    img {}
+                    img {
+                        width: 100%;
+                        margin: 0;
+                    }
 
                     .card-body {
                         .name-product {
@@ -275,10 +287,12 @@
                         @include text($fw-semibold, $fs-xl, $lh-md, $text-c1-dark);
                     }
                     a{
+                        display: block;
                         text-decoration: none;
                         @extend .text-lorem ;
                         font-size: 13px;
                         p{
+                            display: inline-block;
                             margin-bottom: 0.5rem;
                             @extend .hover-gradient;
                             &:hover{
@@ -311,11 +325,13 @@
                         @include text($fw-semibold, $fs-xl, $lh-md, $text-c1-dark);
                     }
                     a{
+                        display: block;
                         text-decoration: none;
                         @extend .text-lorem ;
                         font-size: 13px;
 
                         p{
+                            display: inline-block;
                             margin-bottom: 0.5rem;
                             @extend .hover-gradient;
                             &:hover{
@@ -336,7 +352,49 @@
 }
 
 
+/* Back To Top */
+.backToTop{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    visibility: hidden;
+    opacity: 0;
 
+    @media screen and (max-width: 768px) {
+        right: 10px;
+        bottom: 20px;
+    }
+
+}
+
+/* back-to-top button visible */
+.cd-top--is-visible { 
+    visibility: visible;    // can not tab
+    opacity: 1;
+
+}
+
+
+.backToTop i{
+    color: $bg-c0-violet;
+    border: 3px solid $bg-c0-violet;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+
+
+    @media screen and (max-width: 768px) {
+        width: 45px;
+        height: 45px;
+        line-height: 40px;
+    }
+}
+
+
+// Hover text gradient
 @keyframes rainbow { 
     0%{background-position:left}
     50%{background-position:right}

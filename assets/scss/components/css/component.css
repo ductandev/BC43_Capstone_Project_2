@@ -105,14 +105,14 @@
 
 .text-name-product {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   color: #000;
 }
 
 .text-short-descript {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: #CBC9C9;
 }
@@ -131,8 +131,16 @@
   color: #000;
 }
 
+.text-gradient {
+  color: #00e6d8;
+  background-image: -webkit-linear-gradient(45deg, #00e6d8 0%, #9425f3 50%, #5136f9 1000%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hover-gradient {
-  background: linear-gradient(to right, #d118ec, #5136f9, rgba(62, 32, 248, 0.9019607843));
+  background: linear-gradient(to right, #00e6d8, #9425f3, #5136f9);
   background-size: 300% 300%;
   animation: rainbow 2s ease-in-out infinite;
   -webkit-background-clip: text;

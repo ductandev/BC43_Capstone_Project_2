@@ -16,6 +16,8 @@
 html{
     --color: #{$text-c0-dark};
     --bg: #{$bg-c0-light};
+
+    scroll-behavior: smooth;
 }
 
 
