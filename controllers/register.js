@@ -84,6 +84,7 @@ form.addEventListener("submit", function (e) {
     isCheckPhoneError
   ) {
   } else {
+    e.preventDefault();
     document.querySelector("#btnClick").onclick = function () {
       let thongTin = new UserRegister();
       let arrInput = document.querySelectorAll(
@@ -116,6 +117,7 @@ form.addEventListener("submit", function (e) {
         console.log(err.response.data);
         document.getElementById("email-error").innerHTML =
           "Email đã được sử dụng";
+        document.getElementById("complete").innerHTML = "";
       });
     };
   }
