@@ -74,17 +74,34 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let isEmailError = checkEmailError(email);
+<<<<<<< HEAD
   let isCheckMathError = checkMathchPasswordError(password, confirmPassword);
   let isNameLengthError = checkLengthError(username, 3, 30);
   let isCheckPhoneError = checkPhoneError(phone);
   if (
     isEmailError ||
     isNameLengthError ||
+=======
+  let isPasswordLengthError = checkLengthError(password, 6, 12);
+  let isPasswordError = checkPassword(password);
+  let isCheckMathError = checkMathchPasswordError(password, confirmPassword);
+  let isNameLengthError = checkLengthError(username, 3, 30);
+  let isCheckPhoneError = checkPhoneError(phone);
+
+  if (
+    isEmailError ||
+    isNameLengthError ||
+    isPasswordLengthError ||
+    isPasswordError ||
+>>>>>>> giang-branch2-register
     isCheckMathError ||
     isCheckPhoneError
   ) {
   } else {
+<<<<<<< HEAD
     e.preventDefault();
+=======
+>>>>>>> giang-branch2-register
     document.querySelector("#btnClick").onclick = function () {
       let thongTin = new UserRegister();
       let arrInput = document.querySelectorAll(
@@ -99,6 +116,11 @@ form.addEventListener("submit", function (e) {
         if (radio.checked) {
           if (radio.value === "false") {
             thongTin.gender = false;
+<<<<<<< HEAD
+=======
+          } else {
+            thongTin.gender = true;
+>>>>>>> giang-branch2-register
           }
         }
       }
