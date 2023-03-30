@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-//back to top
-=======
->>>>>>> giang-branch2-register
 window.onscroll = () => {
   toggleTopButton();
 };
