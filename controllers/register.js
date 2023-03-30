@@ -33,6 +33,20 @@ function checkEmailError(input) {
   return isEmailError;
 }
 
+function checkPassword(input) {
+  const regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  input.value = input.value.trim();
+  let isPasswordError = !regexPassword.test(input.value);
+  if (regexPassword.test(input.value)) {
+    showSuccess(input);
+  } else {
+    showError(
+      input,
+      " Mật khẩu bao gồm ít nhất một số và bao gồm cả chữ thường và chữ in hoa và ký tự đặc biệt"
+    );
+  }
+  return isPasswordError;
+}
 function checkLengthError(input, min, max) {
   input.value = input.value.trim();
 
